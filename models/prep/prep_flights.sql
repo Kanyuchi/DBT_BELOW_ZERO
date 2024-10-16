@@ -1,6 +1,6 @@
 WITH flights_two_months AS (
     SELECT * 
-    FROM {{ref('staging_flights_two_months')}}
+    FROM {{ref('staging_flights')}}
 ),
 flights_cleaned AS (
     SELECT flight_date::DATE
