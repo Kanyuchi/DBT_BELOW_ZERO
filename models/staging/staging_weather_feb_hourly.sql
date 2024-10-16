@@ -21,7 +21,7 @@ hourly_data_feb AS (
             ,(json_data->>'pres')::NUMERIC AS pressure_hpa 
             ,(json_data->>'tsun')::INTEGER AS sun_minutes
             ,(json_data->>'coco')::INTEGER AS condition_code
-    FROM hourly_raw
+    FROM hourly_feb_raw
 )
 SELECT * 
-FROM hourly_data
+FROM hourly_data_feb
