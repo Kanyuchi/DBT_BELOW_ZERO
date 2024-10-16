@@ -1,6 +1,7 @@
 WITH hourly_data AS (
     SELECT * 
     FROM {{ref('staging_jan_weather_hourly')}}
+    UNION ALL SELECT * FROM {{ref('staging_feb_weather_hourly')}}
 ),
 add_features AS (
     SELECT *
