@@ -38,12 +38,11 @@ total_stats AS (
     USING (flight_date, faa)
 )
 SELECT t.* 
-        ,w.min_temp_c
-        ,w.max_temp_c
+        ,w.temp_c
         ,w.precipitation_mm
-        ,w.max_snow_mm
-        ,w.avg_wind_direction
-        ,w.avg_wind_speed_kmh
+        ,w.snow_mm
+        ,w.wind_direction
+        ,w.wind_speed_kmh
         ,w.wind_peakgust_kmh
 FROM total_stats t
 LEFT JOIN {{ref('prep_weather_daily')}} w
