@@ -1,0 +1,14 @@
+version: 2
+sources:
+
+- name: flights
+  schema: p_below_zero
+  tables:
+    - name: flights
+
+- name: weather
+  schema: p_below_zero
+  tables:
+    - name: weather_jan_hourly_raw
+    - name: weather_feb_hourly_raw
+   
